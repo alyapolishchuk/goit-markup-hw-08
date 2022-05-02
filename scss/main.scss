@@ -1,0 +1,37 @@
+//  Змінні 
+@import './utils/variables';
+
+// Visually-hidden
+@import './utils/visually-hidden';
+
+// Базові стилі
+ @import './base/base';
+
+//  Header
+@import './components/page-header';
+
+// Decisions
+@import './components/decisions';
+
+// Advantages
+@import './components/advantages';
+
+// Work
+@import './components/work';
+
+// Team
+@import './components/team';
+
+// Clients
+@import './components/clients';
+
+// Portfolio
+@import './components/portfolio';
+
+// Footer
+@import './components/footer';
+
+// Backdrop
+@import './components/backdrop';
+
+

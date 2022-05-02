@@ -1,0 +1,41 @@
+/* Advantages start */
+
+.advantages {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &-list {
+    display: flex;
+  }
+
+  & .text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  &-text-title {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background: var(--accent-card-color);
+  }
+}
+
+/* Advantages end */

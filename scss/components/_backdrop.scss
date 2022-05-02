@@ -1,0 +1,204 @@
+/* Backdrop start */
+
+.backdrop {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+  transition: opacity 1000ms ease-out, visibility 1000ms ease-out;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  width: 528px;
+  min-height: 581px;
+  padding: 40px;
+  border-radius: 4px;
+  background: var(--secondary-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform-origin 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  .backdrop.is-hidden & {
+    transform: translateY(-600px) rotateX(-30deg) scale(0);
+    transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  .backdrop & {
+    transform: translateY(0) rotateX(0) scale(1);
+    transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+
+.modal-button {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.modal-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  color: var(--main-color);
+}
+
+.input-box {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.label-name {
+  display: block;
+  text-align: start;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+}
+
+.field {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
+
+  &.comment {
+    /* color: rgba(117, 117, 117, 0.5); */
+    resize: none;
+    padding: 12px 16px;
+  }
+}
+
+.icon-field {
+  position: absolute;
+  left: 12px;
+  top: 30px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .field:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.agreement-box {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.custom-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  margin-left: 12px;
+  border: 1.8px solid var(--main-color);
+  border-radius: 2px;
+  background-color: var(--secondary-color);
+  background-origin: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .agreement-checkbox:checked + & {
+    background-color: var(--accent-color);
+    border: transparent;
+  }
+}
+
+.custom-icon {
+  fill: var(--secondary-color);
+}
+
+.agreement {
+  margin-left: 7px;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+
+  a {
+    color: var(--accent-color);
+    text-underline-position: under;
+  }
+}
+
+.button-send {
+  display: block;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding: 10px 55px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  border-color: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  color: var(--secondary-color);
+  background: var(--accent-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background: var(--button-accent-color);
+  }
+}
+
+/* Backdrop end */
