@@ -13,20 +13,6 @@
     line-height: 1.16;
   }
 
-  &-list {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-
-    &-item {
-      position: relative;
-
-      &:not(:last-child) {
-        margin-right: 30px;
-      }
-    }
-  }
-
   &-dark-box {
     position: absolute;
     display: flex;
@@ -49,4 +35,17 @@
   }
 }
 
+.work-list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.work-list-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
 /* Work end */

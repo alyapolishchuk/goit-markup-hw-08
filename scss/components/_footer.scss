@@ -13,32 +13,33 @@
   &-section {
     align-items: baseline;
   }
+}
 
-  &-location {
-    text-decoration: none;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--secondary-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.footer-location {
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--secondary-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
-  &-link {
-    text-decoration: none;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.6);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-    }
+.footer-link {
+  text-decoration: none;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
 }
 

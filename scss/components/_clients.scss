@@ -14,13 +14,13 @@
     letter-spacing: 0.03em;
     color: var(--main-color);
   }
+}
 
-  &-list {
-    display: flex;
+.clients-list {
+  display: flex;
 
-    &-item:not(:last-child) {
-      margin-right: 30px;
-    }
+  &-item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
