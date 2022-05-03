@@ -3,6 +3,9 @@
 
   .container {
     display: flex;
+    @include mq(mobile-only) {
+      position: relative
+    }
   }
 }
 
@@ -13,14 +16,38 @@
   // outline: 1px solid tomato;
 }
 
+.nav__menu--open {
+  @include mq(mobile-only) {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    &:hover {
+      fill: var(--accent-color);
+    }
+  }
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
 .logo {
   text-decoration: none;
   font-family: var(--secondary-font-family);
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+
+  @include mq(mobile) {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+
+  @include mq(desktop) {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 
   &__name {
     color: var(--main-color);
@@ -28,7 +55,19 @@
 }
 
 .nav__logo {
-  margin-right: 93px;
+
+  @include mq(mobile-only) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @include mq(tablet) {
+    margin-right: 88px;
+  }
+
+  @include mq(desktop) {
+    margin-right: 93px;
+  }
 }
 
 .site-nav {
@@ -41,6 +80,10 @@
   /* outline: 1px solid tomato; */
   &__item:not(:last-child) {
     margin-right: 50px;
+  }
+
+  @include mq(mobile-only) {
+    display: none;
   }
 }
 
@@ -75,46 +118,6 @@
     bottom: -1px;
     border-radius: 2px;
     background: var(--accent-color);
-  }
-}
-
-.site-adress {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  /* outline: 1px solid tomato; */
-
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
-.site-adress__link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.15;
-  letter-spacing: 0.02em;
-  color: var(--text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
-}
-
-.site-adress__icon {
-  display: block;
-  margin-right: 10px;
-  fill: var(--text-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  .site-adress__link:hover &,
-  .site-adress__link:focus & {
-    fill: var(--accent-color);
   }
 }
 

@@ -1,26 +1,36 @@
 /* Team start */
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--accent-card-color);
 
-  &-title {
-    text-align: center;
-    margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
-  }
-
-  &-list {
-    display: flex;
-    /*width: 1170px;*/
-
-    /* outline: 1px solid tomato; */
+  @include mq(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
+
+.team-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+}
+
+.team-list {
+  // @media screen and (min-width: 1200px) {
+  display: flex;
+  flex-wrap: wrap;
+}
+// }
 
 .team-title-list {
   border-radius: 0px 0px 4px 4px;
@@ -29,7 +39,23 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   &:not(:last-child) {
-    margin-right: 30px;
+    @include mq(mobile-only) {
+      margin-bottom: 30px;
+    }
+    @include mq(desktop) {
+      margin-right: 30px;
+    }
+  }
+  &:nth-child(2n + 1) {
+    @include mq(tablet-only) {
+      margin-right: 30px;
+    }
+  }
+
+  &:nth-child(-n + 2) {
+    @include mq(tablet-only) {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -38,6 +64,18 @@
   padding-bottom: 30px;
   padding-left: 10px;
   padding-right: 10px;
+
+  @media screen and (min-width: 480px) {
+    flex-basis: 450px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: 354px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: 270px;
+  }
 }
 
 .team-player {
@@ -91,5 +129,4 @@
     fill: var(--secondary-color);
   }
 }
-
 /* Team end */

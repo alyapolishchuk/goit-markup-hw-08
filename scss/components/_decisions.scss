@@ -2,12 +2,11 @@
 
 .decisions {
   display: block;
-  max-width: 1600px;
-  height: 600px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   color: var(--secondary-color);
   background-color: var(--alternative-color);
   background-image: linear-gradient(
@@ -16,17 +15,36 @@
     ),
     url(../images/bgimage.jpg);
 
+    @include mq(tablet) {
+      max-width: 768px;
+    }
+
+    @include mq(desktop) {
+      max-width: 1600px;
+      height: 600px;
+      padding-top: 200px;
+      padding-bottom: 200px;
+
+    }
+
   &__title {
     text-align: center;
     text-transform: uppercase;
-    width: 696px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+    width: 360px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.6;
     letter-spacing: 0.06em;
+
+    @include mq(desktop) {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+    
   }
 }
 
@@ -34,13 +52,13 @@
   display: flex;
   align-items: center;
   text-align: center;
-  font-weight: 700;
   margin-right: auto;
   margin-left: auto;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 32px;
   padding-right: 32px;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;

@@ -25,9 +25,9 @@
 .modal-form {
   display: flex;
   flex-direction: column;
-  width: 528px;
-  min-height: 581px;
   padding: 40px;
+  width: 450px;
+  min-height: 609px;
   border-radius: 4px;
   background: var(--secondary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -35,6 +35,12 @@
   transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     transform-origin 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+
+  @include mq(desktop) {
+    width: 528px;
+    min-height: 581px;
+  }
 
   .backdrop.is-hidden & {
     transform: translateY(-600px) rotateX(-30deg) scale(0);
@@ -74,10 +80,13 @@
   text-align: center;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
-
   color: var(--main-color);
+
+  @include mq(desktop) {
+    line-height: 1.15;
+  }
 }
 
 .input-box {
@@ -135,7 +144,8 @@
 
 .agreement-box {
   display: flex;
-  align-items: center;
+  // align-items: center;
+  align-items: baseline;
   margin-top: 10px;
 }
 
@@ -145,7 +155,6 @@
   align-items: center;
   width: 16px;
   height: 15px;
-  margin-left: 12px;
   border: 1.8px solid var(--main-color);
   border-radius: 2px;
   background-color: var(--secondary-color);
@@ -153,6 +162,9 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  @include mq(desktop) {
+    margin-left: 12px;
+  }
   .agreement-checkbox:checked + & {
     background-color: var(--accent-color);
     border: transparent;
@@ -165,10 +177,15 @@
 
 .agreement {
   margin-left: 7px;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--text-color);
+  
+  @include mq(desktop) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 
   a {
     color: var(--accent-color);

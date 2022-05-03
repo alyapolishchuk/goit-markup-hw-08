@@ -7,11 +7,34 @@
   background-color: var(--alternative-color);
 
   .container {
-    display: flex;
+    @include mq(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &-section {
-    align-items: baseline;
+    @include mq(desktop) {
+      align-items: baseline;
+    }
+  }
+}
+
+.footer-section__adress {
+  @include mq(mobile-only) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+  }
+
+  @include mq(tablet-only) {
+    display: block;
+    margin-left: 61px;
+    margin-bottom: 60px;
+  }
+  @include mq(notDesktop) {
+    text-align: center;
   }
 }
 
@@ -51,17 +74,42 @@
   margin-top: 20px;
 
   &-item:not(:first-child) {
-    margin-top: 9px;
+    margin-top: 8px;
+  }
+
+  &-item:not(:first-child) {
+    @include mq(desktop) {
+      margin-top: 9px;
+    }
   }
 }
 
 .join-section {
-  margin-left: 70px;
+  @include mq(mobile-only) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  @include mq(tablet-only) {
+    display: block;
+    // margin-left: auto;
+    // margin-top: 5px;
+    padding-top: 5px;
+    margin-left: 165px;
+    text-align: center;
+  }
+
+  @include mq(desktop) {
+    margin-left: 70px;
+  }
 }
 
 .join-list {
   display: flex;
   margin-top: 20px;
+  @include mq(mobile-only) {
+    justify-content: center;
+  }
 
   &-item:not(:last-child) {
     margin-right: 10px;
@@ -89,7 +137,21 @@
 }
 
 .subscribe {
-  margin-left: 93px;
+  @include mq(mobile-only) {
+    text-align: center;
+  }
+
+  @include mq(tablet-only) {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq(desktop) {
+    margin-left: auto;
+
+  }
 
   &-title {
     display: block;
@@ -97,7 +159,7 @@
   }
 
   &-mail {
-    width: 358px;
+    width: 450px;
     padding: 15px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -106,6 +168,17 @@
     outline: transparent;
     color: var(--secondary-color);
     background-color: var(--alternative-color);
+
+    @include mq(tablet-only) {
+      display: block;
+    }
+
+    @include mq(notDesktop) {
+      margin-bottom: 20px;
+    }
+    @include mq(desktop) {
+      width: 358px;
+    }
   }
 
   &-icon {
@@ -142,7 +215,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-color);

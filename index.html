@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Студія</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
 
   <body>
@@ -19,6 +20,9 @@
           <a href="./index.html" class="logo nav__logo">
             Web<span class="logo__name">Studio</span>
           </a>
+          <svg class="nav__menu--open" width="40" height="40">
+            <use href="./images/icons.svg.svg#menu-mobile"></use>
+          </svg>
           <ul class="list site-nav">
             <li class="site-nav__item">
               <a
@@ -33,7 +37,6 @@
                 Портфолио
               </a>
             </li>
-            <!-- site-nav__link    "site-nav__link--current"    -->
             <li class="site-nav__item">
               <a href="" class="link site-nav__link"> Контакты </a>
             </li>
@@ -42,7 +45,7 @@
         <ul class="list site-adress">
           <li class="site-adress__item">
             <a href="mailto:info@devstudio.com" class="site-adress__link">
-              <svg class="site-adress__icon" width="16" height="12">
+              <svg class="site-adress__icon site-adress__icon--mail" width="14" height="10">
                 <use href="./images/symbol-defs.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
@@ -50,7 +53,7 @@
           </li>
           <li class="site-adress__item">
             <a href="tel:+380961111111" class="site-adress__link">
-              <svg class="site-adress__icon" width="10" height="16">
+              <svg class="site-adress__icon site-adress__icon--phone" width="10" height="14">
                 <use href="./images/symbol-defs.svg#icon-phone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -61,12 +64,11 @@
     </header>
     <!--Загальна інформація-->
     <main>
-      <!-- Ефективні рішення для вашого бізнесу-->
+      <!-- Ефективні рішення для вашого бізнесу -->
       <section class="decisions">
         <div class="container">
           <h1 class="decisions__title">
             Эффективные решения
-            <!--<br />-->
             для вашего бизнеса
           </h1>
           <button class="decisions__button" type="button" data-modal-open>
@@ -479,7 +481,7 @@
     <!--Підвал-->
     <footer class="footer">
       <div class="container footer-section">
-        <div>
+        <div class="footer-section__adress">
           <a href="./index.html" class="logo">
             Web<span class="logo-name-footer">Studio</span>
           </a>

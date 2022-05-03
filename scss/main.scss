@@ -4,11 +4,16 @@
 // Visually-hidden
 @import './utils/visually-hidden';
 
+// Mixin
+@import './utils/mixin';
+
 // Базові стилі
  @import './base/base';
+ @import './base/container';
 
 //  Header
 @import './components/page-header';
+@import './components/site-adress';
 
 // Decisions
 @import './components/decisions';

@@ -1,26 +1,63 @@
 /* Clients start */
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &-title {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-style: normal;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 28px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
     color: var(--main-color);
+
+    @include mq(desktop) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
   }
 }
 
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
+
+  &-item:nth-child(2n + 1) {
+    @include mq(mobile-only) {
+      margin-right: 30px;
+    }
+  }
+
+  &-item:nth-child(-n + 4) {
+    @include mq(mobile-only) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-item:not(:nth-child(3n + 3)) {
+    @include mq(tablet-only) {
+      margin-right: 30px;
+    }
+  }
+
+  &-item:nth-child(n + 3) {
+    @include mq(tablet-only) {
+      margin-bottom: 30px;
+    }
+  }
 
   &-item:not(:last-child) {
-    margin-right: 30px;
+    @include mq(desktop) {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -28,7 +65,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 92px;
   border-radius: 4px;
   border: 1px solid var(--main-links-color);
@@ -38,6 +74,18 @@
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
+  }
+
+  @include mq(mobile-only) {
+    width: 210px;
+  }
+
+  @include mq(tablet-only) {
+    width: 226px;
+  }
+
+  @include mq(desktop) {
+    width: 170px;
   }
 }
 

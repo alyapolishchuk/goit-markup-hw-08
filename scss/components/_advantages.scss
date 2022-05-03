@@ -3,14 +3,60 @@
 .advantages {
   padding-top: 94px;
   padding-bottom: 94px;
+  @include mq(notDesktop) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   &-list {
-    display: flex;
+    @include mq(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-item {
+    @include mq(tablet) {
+      flex-basis: 354px;
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
+    }
+    @include mq(desktop) {
+      flex-basis: 270px;
+    }
+  }
+
+  &-item:not(:last-child) {
+    @include mq(notDesktop) {
+      margin-bottom: 30px;
+    }
+    @include mq(desktop) {
+      margin-right: 30px;
+    }
   }
 
   & .text {
     font-size: 14px;
     line-height: 1.7;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background: var(--accent-card-color);
+    @include mq(tablet) {
+      width: 354px;
+    }
+
+    @include mq(desktop) {
+      width: 270px;
+    }
   }
 
   &-text-title {
@@ -20,21 +66,10 @@
     font-size: 14px;
     line-height: 1.15;
     letter-spacing: 0.03em;
-  }
 
-  &-item:not(:last-child) {
-    margin-right: 30px;
-  }
-
-  &-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
-    border-radius: 4px;
-    background: var(--accent-card-color);
+    @include mq(mobile-only) {
+      text-align: center;
+    }
   }
 }
 
