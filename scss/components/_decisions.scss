@@ -33,11 +33,14 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
-    width: 360px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.6;
     letter-spacing: 0.06em;
+
+    @include mq(notDesktop) {
+      max-width: 360px;
+    }
 
     @include mq(desktop) {
       width: 696px;

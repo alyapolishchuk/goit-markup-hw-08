@@ -23,13 +23,12 @@
           </a>
           <ul class="list site-nav">
             <li class="site-nav__item">
-              <a href="./index.html" class="link site-nav__link"> Студия </a>
+              <a href="./index.html" class="link site-nav__link">
+                Студия
+              </a>
             </li>
             <li class="site-nav__item">
-              <a
-                href="./portfolio.html"
-                class="link site-nav__link site-nav__link--current"
-              >
+              <a href="./portfolio.html" class="link site-nav__link site-nav__link--current">
                 Портфолио
               </a>
             </li>
@@ -41,21 +40,76 @@
         <ul class="list site-adress">
           <li class="site-adress__item">
             <a href="mailto:info@devstudio.com" class="site-adress__link">
-              <svg class="site-adress__icon" width="16" height="12">
+              <svg class="site-adress__icon site-adress__icon--mail" width="14" height="10">
                 <use href="./images/symbol-defs.svg#icon-mail"></use>
               </svg>
-              info@devstudio.com</a
-            >
+              info@devstudio.com</a>
           </li>
           <li class="site-adress__item">
             <a href="tel:+380961111111" class="site-adress__link">
-              <svg class="site-adress__icon" width="10" height="16">
+              <svg class="site-adress__icon site-adress__icon--phone" width="10" height="14">
                 <use href="./images/symbol-defs.svg#icon-phone"></use>
               </svg>
-              +38 096 111 11 11</a
-            >
+              +38 096 111 11 11</a>
           </li>
         </ul>
+        <!-- Кнопка для мобільного меню -->
+        <button type="button" class="menu-button" data-menu-button>
+          <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+            <use class="menu-button__icon--open" href="./images/icons.svg.svg#menu-mobile"></use>
+            <use class="menu-button__icon--close" href="./images/icons.svg.svg#menu-mobile-close"></use>
+          </svg>
+        </button>
+        <!-- Мобільне меню -->
+        <div class="mobile-menu" data-menu>
+          <ul class="list mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="./index.html">Студия</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link mobile-menu__link--current" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__link" href="">Контакты</a>
+            </li>
+          </ul>
+          <div class="mobile-menu__part--bottom">
+            <ul class="list mobile-menu__contacts">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--phone" href="tel:+380961111111">
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--mail" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="list mobile-menu__social">
+              <li class="social__item">
+                <a class="social__link" href="">
+                  Instagram
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="">
+                  Twitter
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="">
+                  Facebook
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="">
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!--Портфоліо-->
@@ -65,7 +119,7 @@
           <h1 class="portfolio-title visually-hidden">Портфолио</h1>
           <ul class="list button-list">
             <li class="button-list-item">
-              <button type="button" class="button">Все</button>
+              <button type="button" class="button button--all">Все</button>
             </li>
             <li class="button-list-item">
               <button type="button" class="button">Веб-сайты</button>
@@ -269,7 +323,7 @@
     <!--Підвал-->
     <footer class="footer">
       <div class="container footer-section">
-        <div>
+        <div class="footer-section__adress">
           <a href="./index.html" class="logo">
             Web<span class="logo-name-footer">Studio</span>
           </a>
@@ -359,5 +413,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

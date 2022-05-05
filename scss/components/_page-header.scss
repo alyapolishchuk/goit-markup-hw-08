@@ -1,11 +1,10 @@
 .header {
   border-bottom: 1px solid var(--header-border-color);
-
+  @include mq(mobile-only) {
+    position: relative;
+  }
   .container {
     display: flex;
-    @include mq(mobile-only) {
-      position: relative
-    }
   }
 }
 
@@ -14,22 +13,6 @@
   align-items: center;
 
   // outline: 1px solid tomato;
-}
-
-.nav__menu--open {
-  @include mq(mobile-only) {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-
-    &:hover {
-      fill: var(--accent-color);
-    }
-  }
-
-  @include mq(tablet) {
-    display: none;
-  }
 }
 
 .logo {
@@ -55,7 +38,6 @@
 }
 
 .nav__logo {
-
   @include mq(mobile-only) {
     padding-top: 16px;
     padding-bottom: 16px;
