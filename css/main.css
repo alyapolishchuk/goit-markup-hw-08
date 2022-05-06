@@ -1117,17 +1117,11 @@ img {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-}
-
-@media screen and (min-width: 768px) {
-  .portfolio-list {
-    margin-right: -30px;
-  }
+  gap: 30px;
 }
 
 .portfolio-title-list {
   display: flex;
-  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 480px) {
@@ -1139,14 +1133,12 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .portfolio-title-list {
     flex-basis: 354px;
-    margin-right: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .portfolio-title-list {
     flex-basis: 370px;
-    margin-right: 30px;
   }
 }
 

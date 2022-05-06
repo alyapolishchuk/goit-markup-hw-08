@@ -71,15 +71,16 @@
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 
-  @include mq(tablet) {
-    margin-right: -30px;
-  }
+  // @include mq(tablet) {
+  //   margin-right: -30px;
+  // }
 }
 
 .portfolio-title-list {
   display: flex;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
 
   @include mq(mobile) {
     flex-basis: 450px;
@@ -87,12 +88,12 @@
 
   @include mq(tablet-only) {
     flex-basis: 354px;
-    margin-right: 30px;
+    // margin-right: 30px;
   }
 
   @include mq(desktop) {
     flex-basis: 370px;
-    margin-right: 30px;
+    // margin-right: 30px;
   }
 
   &:nth-last-child(-n + 3) {
