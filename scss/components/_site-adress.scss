@@ -5,8 +5,6 @@
 
   @include mq(tablet) {
     margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
 
     &__item:not(:last-child) {
       margin-bottom: 10px;
