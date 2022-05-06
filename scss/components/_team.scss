@@ -52,10 +52,11 @@
   }
 
   @include mq(tablet-only) {
-    // flex-basis: calc((100%-2*30px)/2);
-    // margin-bottom: 15px;
-    // margin-top: 15px;
     flex-basis: 354px;
+  }
+
+  @include mq(desktop) {
+    flex-basis: 270px;
   }
 
   &:nth-child(2n + 1) {
@@ -98,6 +99,12 @@
   line-height: 1.17;
   letter-spacing: 0.03em;
 }
+
+// .team-img {
+//   @include mq(desktrop) {
+//     width: 270px;
+//   }
+// }
 
 .text.team-player-description {
   text-align: center;

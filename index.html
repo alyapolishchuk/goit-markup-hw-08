@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <title>Студія</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
 
@@ -42,7 +47,11 @@
         <ul class="list site-adress">
           <li class="site-adress__item">
             <a href="mailto:info@devstudio.com" class="site-adress__link">
-              <svg class="site-adress__icon site-adress__icon--mail" width="14" height="10">
+              <svg
+                class="site-adress__icon site-adress__icon--mail"
+                width="14"
+                height="10"
+              >
                 <use href="./images/symbol-defs.svg#icon-mail"></use>
               </svg>
               info@devstudio.com</a
@@ -50,7 +59,11 @@
           </li>
           <li class="site-adress__item">
             <a href="tel:+380961111111" class="site-adress__link">
-              <svg class="site-adress__icon site-adress__icon--phone" width="10" height="14">
+              <svg
+                class="site-adress__icon site-adress__icon--phone"
+                width="10"
+                height="14"
+              >
                 <use href="./images/symbol-defs.svg#icon-phone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -58,20 +71,27 @@
           </li>
         </ul>
         <!-- Кнопка для мобільного меню -->
-        <button
-        type="button"
-        class="menu-button"
-        data-menu-button>
+        <button type="button" class="menu-button" data-menu-button>
           <svg width="40" height="40" aria-label="Перемикач мобільного меню">
-            <use class="menu-button__icon--open" href="./images/icons.svg.svg#menu-mobile"></use>
-            <use class="menu-button__icon--close" href="./images/icons.svg.svg#menu-mobile-close"></use>
+            <use
+              class="menu-button__icon--open"
+              href="./images/icons.svg.svg#menu-mobile"
+            ></use>
+            <use
+              class="menu-button__icon--close"
+              href="./images/icons.svg.svg#menu-mobile-close"
+            ></use>
           </svg>
         </button>
         <!-- Мобільне меню -->
         <div class="mobile-menu" data-menu>
           <ul class="list mobile-menu__list">
             <li class="mobile-menu__item">
-              <a class="mobile-menu__link mobile-menu__link--current" href="./index.html">Студия</a>
+              <a
+                class="mobile-menu__link mobile-menu__link--current"
+                href="./index.html"
+                >Студия</a
+              >
             </li>
             <li class="mobile-menu__item">
               <a class="mobile-menu__link" href="./portfolio.html">Портфолио</a>
@@ -83,39 +103,37 @@
           <div class="mobile-menu__part--bottom">
             <ul class="list mobile-menu__contacts">
               <li class="contacts__item">
-                <a class="contacts__link contacts__link--phone" href="tel:+380961111111">
+                <a
+                  class="contacts__link contacts__link--phone"
+                  href="tel:+380961111111"
+                >
                   +38 096 111 11 11
                 </a>
               </li>
               <li class="contacts__item">
-                <a class="contacts__link contacts__link--mail" href="mailto:info@devstudio.com">
+                <a
+                  class="contacts__link contacts__link--mail"
+                  href="mailto:info@devstudio.com"
+                >
                   info@devstudio.com
                 </a>
               </li>
             </ul>
             <ul class="list mobile-menu__social">
               <li class="social__item">
-                <a class="social__link" href="">
-                  Instagram
-                </a>
+                <a class="social__link" href=""> Instagram </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="">
-                  Twitter
-                </a>
+                <a class="social__link" href=""> Twitter </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="">
-                  Facebook
-                </a>
+                <a class="social__link" href=""> Facebook </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="">
-                  LinkedIn
-                </a>
+                <a class="social__link" href=""> LinkedIn </a>
               </li>
             </ul>
-          </div>   
+          </div>
         </div>
       </div>
     </header>
@@ -125,8 +143,7 @@
       <section class="decisions">
         <div class="container">
           <h1 class="decisions__title">
-            Эффективные решения
-            для вашего бизнеса
+            Эффективные решения для вашего бизнеса
           </h1>
           <button class="decisions__button" type="button" data-modal-open>
             Заказать услугу
@@ -199,7 +216,11 @@
             <li class="work-list-item">
               <img
                 class="work-img"
-                src="./images/work_1.jpg"
+                srcset="
+                  ./images/desktop/work-1.jpg    1x,
+                  ./images/desktop/work-1@2x.jpg 2x
+                "
+                src="./images/desktop/work-1.jpg"
                 alt="создание сайтов"
                 width="370"
               />
@@ -210,7 +231,11 @@
             <li class="work-list-item">
               <img
                 class="work-img"
-                src="./images/work_2.jpg"
+                srcset="
+                  ./images/desktop/work-2.jpg    1x,
+                  ./images/desktop/work-2@2x.jpg 2x
+                "
+                src="./images/desktop/work-2.jpg"
                 alt="разработка мобильных приложений"
                 width="370"
               />
@@ -221,7 +246,11 @@
             <li class="work-list-item">
               <img
                 class="work-img"
-                src="./images/work_3.jpg"
+                srcset="
+                  ./images/desktop/work-3.jpg    1x,
+                  ./images/desktop/work-3@2x.jpg 2x
+                "
+                src="./images/desktop/work-3.jpg"
                 alt="оформление под потребителя"
                 width="370"
               />
@@ -238,11 +267,36 @@
           <h2 class="team-title">Наша команда</h2>
           <ul class="list team-list">
             <li class="team-title-list">
-              <img
-                src="./images/team_1.jpg"
-                alt="дизайнер продукта"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team-1_desktop.jpg    1x,
+                    ./images/desktop/team-1_desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team-1_tablet.jpg    1x,
+                    ./images/tablet/team-1_tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-1.jpg    1x,
+                    ./images/mobile/team-1@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="team-img"
+                  src="./images/mobile/team-1.jpg"
+                  alt="дизайнер продукта"
+                  width="450"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card-description">
                 <h3 class="team-player">Игорь Демьяненко</h3>
                 <p class="text team-player-description">Product Designer</p>
@@ -301,7 +355,36 @@
               </div>
             </li>
             <li class="team-title-list">
-              <img src="./images/team_2.jpg" alt="разработчик" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team-2_desktop.jpg    1x,
+                    ./images/desktop/team-2_desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team-2_tablet.jpg    1x,
+                    ./images/tablet/team-2_tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-2.jpg    1x,
+                    ./images/mobile/team-2@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="team-img"
+                  src="./images/mobile/team-2.jpg"
+                  alt="дизайнер продукта"
+                  width="450"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card-description">
                 <h3 class="team-player">Ольга Репина</h3>
                 <p class="text team-player-description">Frontend Developer</p>
@@ -360,7 +443,36 @@
               </div>
             </li>
             <li class="team-title-list">
-              <img src="./images/team_3.jpg" alt="маркетолог" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team-3_desktop.jpg     1x,
+                    ./images/desktop/team-3_desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team-3_tablet.jpg    1x,
+                    ./images/tablet/team-3_tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-3.jpg    1x,
+                    ./images/mobile/team-3@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="team-img"
+                  src="./images/mobile/team-3.jpg"
+                  alt="дизайнер продукта"
+                  width="450"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card-description">
                 <h3 class="team-player">Николай Тарасов</h3>
                 <p class="text team-player-description">Marketing</p>
@@ -419,11 +531,36 @@
               </div>
             </li>
             <li class="team-title-list">
-              <img
-                src="./images/team_4.jpg"
-                alt="дизайнер интерфейса"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/team-4_desktop.jpg    1x,
+                    ./images/desktop/team-4_desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/team-4_tablet.jpg    1x,
+                    ./images/tablet/team-4_tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/team-4.jpg    1x,
+                    ./images/mobile/team-4@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  class="team-img"
+                  src="./images/mobile/team-4.jpg"
+                  alt="дизайнер продукта"
+                  width="450"
+                  loading="lazy"
+                />
+              </picture>
               <div class="card-description">
                 <h3 class="team-player">Михаил Ермаков</h3>
                 <p class="text team-player-description">UI Designer</p>
@@ -663,14 +800,24 @@
           </label>
           <label class="input-box">
             <span class="label-name"> Комментарий </span>
-            <textarea class="field comment" name="comment" rows="5" placeholder="Введите текст"></textarea>
+            <textarea
+              class="field comment"
+              name="comment"
+              rows="5"
+              placeholder="Введите текст"
+            ></textarea>
           </label>
           <label class="agreement-box">
-            <input class="agreement-checkbox visually-hidden" type="checkbox" name="checked-checkbox" aria-hidden="true"
-              tabindex="-1" />
+            <input
+              class="agreement-checkbox visually-hidden"
+              type="checkbox"
+              name="checked-checkbox"
+              aria-hidden="true"
+              tabindex="-1"
+            />
             <span class="custom-checkbox">
-              <svg class="custom-icon" width="11" height="8">
-                <use href="./images/icons.svg.svg#icon-icon-check"></use>
+              <svg class="custom-icon" width="16" height="15">
+                <use href="./images/icons.svg.svg#icon-check"></use>
               </svg>
             </span>
             <span class="agreement">
