@@ -72,12 +72,14 @@
   }
 
   @include mq(tablet) {
-    max-width: 768px;
+    // max-width: 768px;
+    width: 100%;
   }
 
   @include mq(desktop) {
-    max-width: 1600px;
+    // max-width: 1600px;
     height: 600px;
+    width: 100%;
     padding-top: 200px;
     padding-bottom: 200px;
   }
