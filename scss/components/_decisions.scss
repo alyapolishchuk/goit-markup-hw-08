@@ -5,13 +5,14 @@
   margin-right: auto;
   padding-top: 118px;
   padding-bottom: 118px;
+  height: 400px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--secondary-color);
   background-color: var(--alternative-color);
 
- @include mq(mobile-only) {
+  @include mq(mobile-only) {
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -71,18 +72,22 @@
     }
   }
 
-  /*
   @include mq(tablet) {
-    max-width: 768px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    height: 500px;
   }
 
   @include mq(desktop) {
-    max-width: 1600px;
-    height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--secondary-color);
+    background-color: var(--alternative-color);
   }
-  */
 
   &__title {
     text-align: center;
@@ -99,8 +104,14 @@
       max-width: 360px;
     }
 
+    @include mq(tablet) {
+      max-width: 696px;
+      font-size: 38px;
+      line-height: 1.6;
+    }
+
     @include mq(desktop) {
-      width: 696px;
+      max-width: 696px;
       font-size: 44px;
       line-height: 1.36;
     }
@@ -132,6 +143,14 @@
   &:hover,
   &:focus {
     background-color: var(--button-accent-color);
+  }
+
+  @include mq(tablet) {
+    font-size: 18px;
+  }
+
+  @include mq(desktop) {
+    font-size: 20px;
   }
 }
 
