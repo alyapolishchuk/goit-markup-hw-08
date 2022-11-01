@@ -66,6 +66,10 @@ img {
   color: var(--text-color);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* General end */
 .container {
   display: block;
