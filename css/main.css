@@ -483,6 +483,13 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .decisions {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .decisions {
+    height: 600px;
+    width: 100%;
     padding-top: 200px;
     padding-bottom: 200px;
     height: 600px;
