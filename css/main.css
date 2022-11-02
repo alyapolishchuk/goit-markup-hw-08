@@ -1432,19 +1432,19 @@ html {
 @media screen and (max-width: 479px) {
   .modal {
     width: 100vw;
-    height: 100vh;
+    height: 580px;
   }
 }
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
-    min-height: 609px;
+    height: 581px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
-    min-height: 581px;
+    height: 581px;
   }
 }
 .backdrop.is-hidden .modal {

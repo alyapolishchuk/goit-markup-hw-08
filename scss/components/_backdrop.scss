@@ -37,17 +37,17 @@
 
   @media screen and(max-width: 479px) {
     width: 100vw;
-    height: 100vh;
+    height: 580px;
   }
 
   @include mq(mobile) {
     width: 450px;
-    min-height: 609px;
+    height: 581px;
   }
 
   @include mq(desktop) {
     width: 528px;
-    min-height: 581px;
+    height: 581px;
   }
 
   .backdrop.is-hidden & {
